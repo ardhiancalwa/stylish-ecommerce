@@ -1,8 +1,7 @@
+import 'package:ecommerce/app/routes/app_pages.dart';
 import 'package:ecommerce/app/shared/color.dart';
 import 'package:ecommerce/app/shared/widgets/list_shopping.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
@@ -19,13 +18,11 @@ class CheckoutPageView extends GetView<CheckoutPageController> {
           backgroundColor: Colors.white,
           surfaceTintColor: Colors.white,
           automaticallyImplyLeading: false,
-          leading: GestureDetector(
-            onTap: () {
+          leading: IconButton(
+            onPressed: () {
               Get.back();
             },
-            child: Icon(
-              Icons.arrow_back_ios_new_rounded,
-            ),
+            icon: Icon(Icons.arrow_back_ios_new_rounded),
           ),
           title: Text(
             'Checkout',
@@ -165,13 +162,18 @@ class CheckoutPageView extends GetView<CheckoutPageController> {
                           itemCount: controller.data.length,
                           itemBuilder: (context, index) {
                             final item = controller.data[index];
-                            return ShoppingList(
-                              discount: item['discount'],
-                              image: item['image'],
-                              name: item['name'],
-                              price: item['price'],
-                              rate: item['rate'],
-                              firstPrice: item['firstPrice'],
+                            return GestureDetector(
+                              onTap: () {
+                                Get.toNamed(Routes.PLACE_ORDER_PAGE);
+                              },
+                              child: ShoppingList(
+                                discount: item['discount'],
+                                image: item['image'],
+                                name: item['name'],
+                                price: item['price'],
+                                rate: item['rate'],
+                                firstPrice: item['firstPrice'],
+                              ),
                             );
                           },
                         ),

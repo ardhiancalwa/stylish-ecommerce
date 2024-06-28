@@ -18,8 +18,11 @@ class ProfilePageView extends GetView<ProfilePageController> {
           backgroundColor: Colors.white,
           surfaceTintColor: Colors.white,
           automaticallyImplyLeading: false,
-          leading: Icon(
-            Icons.arrow_back_ios_new_rounded,
+          leading: IconButton(
+            onPressed: () {
+              Get.back();
+            },
+            icon: Icon(Icons.arrow_back_ios_new_rounded),
           ),
           title: Text(
             'Checkout',

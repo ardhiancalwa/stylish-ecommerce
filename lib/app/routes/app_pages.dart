@@ -10,8 +10,12 @@ import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/onboarding_screen/bindings/onboarding_screen_binding.dart';
 import '../modules/onboarding_screen/views/onboarding_screen_view.dart';
+import '../modules/placeOrder_page/bindings/place_order_page_binding.dart';
+import '../modules/placeOrder_page/views/place_order_page_view.dart';
 import '../modules/profile_page/bindings/profile_page_binding.dart';
 import '../modules/profile_page/views/profile_page_view.dart';
+import '../modules/shipping_page/bindings/shipping_page_binding.dart';
+import '../modules/shipping_page/views/shipping_page_view.dart';
 import '../modules/shop_page/bindings/shop_page_binding.dart';
 import '../modules/shop_page/views/shop_page_view.dart';
 import '../modules/signin_page/bindings/signin_page_binding.dart';
@@ -85,6 +89,16 @@ class AppPages {
       name: _Paths.CHECKOUT_PAGE,
       page: () => const CheckoutPageView(),
       binding: CheckoutPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.PLACE_ORDER_PAGE,
+      page: () => const PlaceOrderPageView(),
+      binding: PlaceOrderPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.SHIPPING_PAGE,
+      page: () => const ShippingPageView(),
+      binding: ShippingPageBinding(),
     ),
   ];
 }

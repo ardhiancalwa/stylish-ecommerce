@@ -14,6 +14,8 @@ abstract class Routes {
   static const SHOP_PAGE = _Paths.SHOP_PAGE;
   static const PROFILE_PAGE = _Paths.PROFILE_PAGE;
   static const CHECKOUT_PAGE = _Paths.CHECKOUT_PAGE;
+  static const PLACE_ORDER_PAGE = _Paths.PLACE_ORDER_PAGE;
+  static const SHIPPING_PAGE = _Paths.SHIPPING_PAGE;
 }
 
 abstract class _Paths {
@@ -29,4 +31,6 @@ abstract class _Paths {
   static const SHOP_PAGE = '/shop-page';
   static const PROFILE_PAGE = '/profile-page';
   static const CHECKOUT_PAGE = '/checkout-page';
+  static const PLACE_ORDER_PAGE = '/place-order-page';
+  static const SHIPPING_PAGE = '/shipping-page';
 }
