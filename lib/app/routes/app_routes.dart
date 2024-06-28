@@ -12,6 +12,8 @@ abstract class Routes {
   static const BOTTOM_NAVIAGTION_BAR = _Paths.BOTTOM_NAVIAGTION_BAR;
   static const WHISTLIST_PAGE = _Paths.WHISTLIST_PAGE;
   static const SHOP_PAGE = _Paths.SHOP_PAGE;
+  static const PROFILE_PAGE = _Paths.PROFILE_PAGE;
+  static const CHECKOUT_PAGE = _Paths.CHECKOUT_PAGE;
 }
 
 abstract class _Paths {
@@ -25,4 +27,6 @@ abstract class _Paths {
   static const BOTTOM_NAVIAGTION_BAR = '/bottom-naviagtion-bar';
   static const WHISTLIST_PAGE = '/whistlist-page';
   static const SHOP_PAGE = '/shop-page';
+  static const PROFILE_PAGE = '/profile-page';
+  static const CHECKOUT_PAGE = '/checkout-page';
 }

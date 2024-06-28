@@ -75,22 +75,30 @@ class BottomNaviagtionBarView extends GetView<BottomNaviagtionBarController> {
           ],
         ),
       ),
-      floatingActionButton: SizedBox(
-        width: 60,
-        height: 60,
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-              shape: CircleBorder(),
-              backgroundColor:
-                  controller.isClicked.value ? primaryColor : Colors.white,
-              padding: EdgeInsets.all(15)),
-          onPressed: () {
-            controller.toggleButton();
-            controller.onTabTapped(2);
-          },
-          child: SvgPicture.asset(
-            'assets/icons/shop.svg',
-            color: controller.isClicked.value ? Colors.white : neutralColor,
+      floatingActionButton: Obx(
+        () => SizedBox(
+          width: 60,
+          height: 60,
+          child: GestureDetector(
+            onTap: () {
+              controller.toggleButton();
+              controller.onTabTapped(2);
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: controller.tabIndex.value == 2
+                    ? primaryColor
+                    : Colors.white,
+              ),
+              padding: EdgeInsets.all(15),
+              child: SvgPicture.asset(
+                'assets/icons/shop.svg',
+                color: controller.tabIndex.value == 2
+                    ? Colors.white
+                    : neutralColor,
+              ),
+            ),
           ),
         ),
       ),

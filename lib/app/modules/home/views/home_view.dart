@@ -1,7 +1,7 @@
 import 'package:ecommerce/app/modules/home/views/iklan/iklan_page_1.dart';
+import 'package:ecommerce/app/routes/app_pages.dart';
 import 'package:ecommerce/app/shared/color.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
@@ -59,7 +59,7 @@ class HomeView extends GetView<HomeController> {
           Padding(
             padding: const EdgeInsets.only(right: 12),
             child: GestureDetector(
-              onTap: () {},
+              onTap: () {              },
               child: Image.asset('assets/images/items/profile_picture.png'),
             ),
           ),

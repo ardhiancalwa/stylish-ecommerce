@@ -2,12 +2,16 @@ import 'package:get/get.dart';
 
 import '../modules/bottomNaviagtionBar/bindings/bottom_naviagtion_bar_binding.dart';
 import '../modules/bottomNaviagtionBar/views/bottom_naviagtion_bar_view.dart';
+import '../modules/checkout_page/bindings/checkout_page_binding.dart';
+import '../modules/checkout_page/views/checkout_page_view.dart';
 import '../modules/forgotPassword_page/bindings/forgot_password_page_binding.dart';
 import '../modules/forgotPassword_page/views/forgot_password_page_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/onboarding_screen/bindings/onboarding_screen_binding.dart';
 import '../modules/onboarding_screen/views/onboarding_screen_view.dart';
+import '../modules/profile_page/bindings/profile_page_binding.dart';
+import '../modules/profile_page/views/profile_page_view.dart';
 import '../modules/shop_page/bindings/shop_page_binding.dart';
 import '../modules/shop_page/views/shop_page_view.dart';
 import '../modules/signin_page/bindings/signin_page_binding.dart';
@@ -71,6 +75,16 @@ class AppPages {
       name: _Paths.SHOP_PAGE,
       page: () => const ShopPageView(),
       binding: ShopPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.PROFILE_PAGE,
+      page: () => const ProfilePageView(),
+      binding: ProfilePageBinding(),
+    ),
+    GetPage(
+      name: _Paths.CHECKOUT_PAGE,
+      page: () => const CheckoutPageView(),
+      binding: CheckoutPageBinding(),
     ),
   ];
 }

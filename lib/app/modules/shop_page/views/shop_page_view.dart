@@ -3,6 +3,7 @@ import 'package:ecommerce/app/modules/shop_page/views/product/picture_2.dart';
 import 'package:ecommerce/app/modules/shop_page/views/product/picture_3.dart';
 import 'package:ecommerce/app/modules/shop_page/views/product/picture_4.dart';
 import 'package:ecommerce/app/modules/shop_page/views/product/picture_5.dart';
+import 'package:ecommerce/app/routes/app_pages.dart';
 import 'package:ecommerce/app/shared/color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -381,66 +382,71 @@ class ShopPageView extends GetView<ShopPageController> {
                         SizedBox(
                           width: 12,
                         ),
-                        Stack(
-                          children: [
-                            Container(
-                              height: 36,
-                              width: 136,
-                              decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                                  colors: [
-                                    Color(0xff71F9A9),
-                                    Color(0xff31B769),
-                                  ],
-                                  begin: Alignment.topLeft,
-                                  tileMode: TileMode.clamp,
+                        GestureDetector(
+                          onTap: () {
+                            Get.toNamed(Routes.PROFILE_PAGE);
+                          },
+                          child: Stack(
+                            children: [
+                              Container(
+                                height: 36,
+                                width: 136,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      Color(0xff71F9A9),
+                                      Color(0xff31B769),
+                                    ],
+                                    begin: Alignment.topLeft,
+                                    tileMode: TileMode.clamp,
+                                  ),
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(20),
+                                    topRight: Radius.circular(4),
+                                    bottomLeft: Radius.circular(20),
+                                    bottomRight: Radius.circular(4),
+                                  ),
                                 ),
-                                borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(20),
-                                  topRight: Radius.circular(4),
-                                  bottomLeft: Radius.circular(20),
-                                  bottomRight: Radius.circular(4),
-                                ),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.only(
-                                  left: 18,
-                                  right: 8,
-                                  top: 6,
-                                  bottom: 8,
-                                ),
-                                child: Text(
-                                  'Buy Now',
-                                  textAlign: TextAlign.right,
-                                  style: GoogleFonts.montserrat(
-                                    fontSize: 16,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w500,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                    left: 18,
+                                    right: 8,
+                                    top: 6,
+                                    bottom: 8,
+                                  ),
+                                  child: Text(
+                                    'Buy Now',
+                                    textAlign: TextAlign.right,
+                                    style: GoogleFonts.montserrat(
+                                      fontSize: 16,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w500,
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                            Container(
-                              height: 42,
-                              width: 42,
-                              decoration: BoxDecoration(
-                                gradient: RadialGradient(
-                                  colors: [
-                                    Color(0xff71F9A9),
-                                    Color(0xff31B769),
-                                  ],
+                              Container(
+                                height: 42,
+                                width: 42,
+                                decoration: BoxDecoration(
+                                  gradient: RadialGradient(
+                                    colors: [
+                                      Color(0xff71F9A9),
+                                      Color(0xff31B769),
+                                    ],
+                                  ),
+                                  shape: BoxShape.circle,
                                 ),
-                                shape: BoxShape.circle,
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: SvgPicture.asset(
-                                  'assets/icons/touch.svg',
-                                  color: Colors.white,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: SvgPicture.asset(
+                                    'assets/icons/touch.svg',
+                                    color: Colors.white,
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         )
                       ],
                     ),
